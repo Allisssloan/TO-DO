@@ -21,14 +21,13 @@ It allows users to manage tasks based on their current **mood**, with a friendly
 ![App Preview](ruta-a-captura.png)  
 <!-- Puedes subir una imagen de preview en tu repo y poner el link aquí -->
 
----
+
 
 ## 🚀 Live Demo
 
-👉 [Ver la app en Netlify](https://tudominio.netlify.app)  
-*(Agrega el enlace real cuando lo publiques)*
+👉 
 
----
+
 
 ## 🛠️ Tecnologías utilizadas
 
