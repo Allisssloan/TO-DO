@@ -1,0 +1,191 @@
+/* ----- Reset básico ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+  }
+  
+  /* ----- Contenedor principal ----- */
+  .container {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* ----- Título ----- */
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #444;
+  }
+  
+  /* ----- Selector de moods ----- */
+  .mood-selector {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  
+  .mood {
+    font-size: 1.5rem;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .mood[data-mood="feliz"] { background-color: #fff176; }
+  .mood[data-mood="neutral"] { background-color: #cfd8dc; }
+  .mood[data-mood="triste"] { background-color: #90caf9; }
+  .mood[data-mood="estresado"] { background-color: #ef9a9a; }
+  
+  .mood:hover {
+    transform: scale(1.1);
+  }
+  
+  .mood.active {
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.15);
+    transform: scale(1.15);
+  }
+  
+  /* ----- Título de sección ----- */
+  h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    color: #222;
+  }
+  
+  /* ----- Lista de tareas ----- */
+  ul {
+    list-style: none;
+    margin-bottom: 20px;
+  }
+  
+  li {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  li.completed {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.6;
+  }
+  
+  /* ----- Subnota de la tarea ----- */
+  .task-note {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 6px;
+    font-style: italic;
+  }
+  
+  /* ----- Nueva tarea (estilo base móvil) ----- */
+  .new-task {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .new-task input,
+  .new-task select,
+  .new-task button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  /* Botón Agregar */
+  #add-task-btn {
+    background-color: #43a047;
+    color: white;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.15);
+    transition: background-color 0.2s, transform 0.2s;
+  }
+  
+  #add-task-btn:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+  }
+  
+  /* ----- Responsive para pantallas grandes (horizontal) ----- */
+  @media (min-width: 768px) {
+    .new-task {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  
+    .new-task input,
+    .new-task select {
+      flex: 1;
+    }
+  
+    #note-input {
+      flex: 2;
+    }
+  
+    #add-task-btn {
+      width: auto;
+      padding: 10px 20px;
+    }
+  }
+  
+  /* Responsive para moods en móvil */
+  @media (max-width: 480px) {
+    .mood {
+      width: 50px;
+      height: 50px;
+      font-size: 1.2rem;
+    }
+  
+    .container {
+      padding: 25px 20px;
+    }
+  
+    h1 {
+      font-size: 1.4rem;
+    }
+  }
+  

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoodTask - Tu To-Do según tu estado de ánimo</title>
+  <!-- Enlace al CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>😊 ¿Cómo te sientes hoy?</h1>
+
+    <!-- Selector de mood -->
+    <div class="mood-selector">
+      <button class="mood" data-mood="feliz">😃</button>
+      <button class="mood" data-mood="neutral">😐</button>
+      <button class="mood" data-mood="triste">😓</button>
+      <button class="mood" data-mood="estresado">😡</button>
+    </div>
+
+    <!-- Lista de tareas principal -->
+    <h2 id="task-title">📌 Tareas para Hoy</h2>
+    <ul id="task-list">
+      <!-- Las tareas se insertarán aquí con JavaScript -->
+    </ul>
+
+    <!-- Agregar nueva tarea -->
+    <div class="new-task">
+      <input type="text" id="task-input" placeholder="Escribe una nueva tarea..." />
+      <button id="add-task-btn"> Agregar ➕ </button>
+    </div>
+  </div>
+
+  <!-- Enlace al JS -->
+  <script src="script.js"></script>
+</body>
+</html>
+
+  
