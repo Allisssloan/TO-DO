@@ -47,9 +47,3 @@ It allows users to manage tasks based on their current **mood**, with a friendly
 
 ---
 
-## 📌 Cómo clonar y ejecutar
-
-```bash
-git clone https://github.com/tu-usuario/proyectos.git
-cd proyectos
-# Luego abre index.html en tu navegador
